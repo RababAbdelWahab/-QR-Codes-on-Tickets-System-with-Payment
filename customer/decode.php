@@ -1,5 +1,5 @@
 <?php
-require "vendor/autoload.php";
+require "../vendor/autoload.php";
 use Zxing\QrReader;
 
 if($_SERVER["REQUEST_METHOD"] !="POST")
@@ -31,6 +31,8 @@ $text = $qrcode->text();
     </head>
 
 <body style="text-align:center; margin-top:100px;">
+<a href="../logout.php" class="button">Log Out</a>
+
     <div class="container">
         <br><br>
         <div class="row">

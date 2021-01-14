@@ -1,4 +1,5 @@
 <?php
+    //DB connection
     $url='localhost';
     $username='root';
     $password='';
@@ -28,11 +29,11 @@ if(isset($_POST['login']))
 
             if($row['Type']=="Customer")
             {
-                header("Location: scanqr.php"); 
+                header("Location: customer/scanqr.php"); 
             }
             else
             {
-                header("Location: index.php"); 
+                header("Location: provider/index.php"); 
             }
         }
         else

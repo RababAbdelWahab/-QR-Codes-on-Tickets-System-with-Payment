@@ -37,7 +37,9 @@ else
     <head>
      <title>payment report</title>
      <script src="http://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
-
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        
         <style>
             label.heading{
                 font-weght:600;
@@ -54,7 +56,8 @@ else
 
 <body style="text-align:center; margin-top:100px;">
 
-
+<a href="../logout.php" class="button">Log Out</a>
+<br>
     <label for="ID" class="heading">Transaction ID</label><br>
     <input id="ID" name="ID" type="text" value="<?php echo $result->transaction->id;?>" disabled="disabled"><br><br>
 
