@@ -1,10 +1,7 @@
 <?php
-
-
 $urlPrefix = '/braintree/';
 require_once 'braintree_php-master/lib/Braintree.php';
-
-
+//set the sandbox credentials
 $gateway = new Braintree\Gateway([
     'environment' => 'sandbox',
     'merchantId' => 'h52c7hh9t3zjjgr9',

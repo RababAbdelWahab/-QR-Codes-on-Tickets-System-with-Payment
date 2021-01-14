@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+//check the user access rights
 if( $_SESSION["Type"]!="Provider")
 {
     echo "you are not allow to access this page";
@@ -12,6 +12,7 @@ if(empty($_POST["payment_method_nonce"]))
 {
     header("Location: index.php");
 }
+//send the data to payment and make a transaction
 $result = $gateway->transaction()->sale([
     'amount' => $_POST["amount"],
     'paymentMethodNonce' => $_POST["payment_method_nonce"],
@@ -38,24 +39,23 @@ else
      <title>payment report</title>
      <script src="http://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
         
-        <style>
-            label.heading{
-                font-weght:600;
-            }
-            .payment-form{
-                width:300px;
-                margin-left:auto;
-                margin-right:auto;
-                padding:10px;
-                border: 1px #333 solid;
-            }
+    <style>
+        label.heading{
+            font-weght:600;
+        }
+        .payment-form{
+            width:300px;
+            margin-left:auto;
+            margin-right:auto;
+            padding:10px;
+            border: 1px #333 solid;
+        }
         </style>
     </head>
 
 <body style="text-align:center; margin-top:100px;">
-
 <a href="../logout.php" class="button">Log Out</a>
 <br>
     <label for="ID" class="heading">Transaction ID</label><br>
@@ -96,7 +96,6 @@ else
         var date=document.getElementById("date").value;
         var provider=document.getElementById("provider").value;
 
-
         var formData = 'firstName='+firstName+'&lastName='+lastName+'&transactionID='+transactionID+'&amount='+amount+'&location='+location+'&date='+date+'&provider='+provider;
         $.ajax({
         url: "qr.php",
@@ -105,13 +104,9 @@ else
         success: function(result) { 
                 var html=result;
                 $( "#qrCode" ).html( html );
-
             }                              
             });
     }
-
-    
 </script>
-
 </body>
 </html>
