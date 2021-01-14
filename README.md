@@ -15,31 +15,37 @@ The system has MySQL DataBase called “qrcode” contains one table “user” 
 
 # GUI Structure
 1. Login Page
+
     This page is used to login to the website where both customer and service provider users can login to the website.
     The privileges of the user is determined depending on the type of the user so each user can access only pages he has access rights to.
 ![Screenshot](GUIimages/login.PNG)
 
 2. Signup Page
+
     This page is used to create an account on the website.
     So the user must fill all the required data to sign up on the website.
 
 ![Screenshot](GUIimages/signup.PNG)
 
 3. Index Page
+
     A service provider uses this page to fill in the ticket info and pay the ticket price with the payment process by adding the card data.
     
 ![Screenshot](GUIimages/index.PNG)
 
 4. Payment Page
+
     A service provider uses this page to complete the payment method and generate the qr code.
 ![Screenshot](GUIimages/payment.PNG)
 ![Screenshot](GUIimages/qr.PNG)
 
 5. Scan Page
+
     A customer uses this page to upload the QR-Code image and scan the QR-Code to show the data in it.
 ![Screenshot](GUIimages/scanqr.PNG)
 
 6. QR Code Date Page
+
     A customer uses this page to show the data in a QR-Code.
 ![Screenshot](GUIimages/dataqr.PNG)
 
