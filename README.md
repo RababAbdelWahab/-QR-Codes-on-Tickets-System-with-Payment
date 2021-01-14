@@ -45,7 +45,7 @@ The system has MySQL DataBase called “qrcode” contains one table “user” 
 
 # How to run?
 1. Install Xampp and PHP 
-2. Clone the project code from github from this link: https://github.com/RababAbdelWahab/QR-Codes-on-Tickets-System-with-Payment
+2. Clone the project code
 3. Go to the project root “QR-Codes-on-Tickets-System-with-Payment”
 4. Run the following commands:
   - composer require khanamiryan/qrcode-detector-decoder
