@@ -1,6 +1,8 @@
 <?php
-$urlPrefix = '/braintree/';
-require_once 'braintree_php-master/lib/Braintree.php';
+require "../vendor/autoload.php";
+
+// $urlPrefix = '/braintree/';
+// require_once 'braintree_php-master/lib/Braintree.php';
 //set the sandbox credentials
 $gateway = new Braintree\Gateway([
     'environment' => 'sandbox',
