@@ -63,6 +63,8 @@ The system has MySQL DataBase called “qrcode” contains one table “user” 
 8. Go to local host link in browser 
  
 # Demo 
+https://www.youtube.com/watch?v=EEbhU9jRmfw
+[![Watch the video](GUIimages/login.PNG)](https://www.youtube.com/watch?v=EEbhU9jRmfw)
 
 # Libraries and APIs used
 1. Braintree API  for payment method
