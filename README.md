@@ -18,6 +18,7 @@ The system has MySQL DataBase called “qrcode” contains one table “user” 
 
     This page is used to login to the website where both customer and service provider users can login to the website.
     The privileges of the user is determined depending on the type of the user so each user can access only pages he has access rights to.
+    
 ![Screenshot](GUIimages/login.PNG)
 
 2. Signup Page
