@@ -10,7 +10,6 @@ if($_SERVER["REQUEST_METHOD"] !="POST")
 $qrcode = new QrReader($_FILES["qrimage"]["tmp_name"]);
 $text = $qrcode->text(); 
 
-// var_dump($text);
 
 ?>
 

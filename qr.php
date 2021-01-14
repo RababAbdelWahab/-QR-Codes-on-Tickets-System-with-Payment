@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if( $_SESSION["Type"]!="Customer")
+if( $_SESSION["Type"]!="Provider")
 {
     echo "you are not allow to access this page";
     exit();
@@ -18,6 +18,7 @@ $text .="Price: ".$_REQUEST["amount"].", ";
 $text .="TransactionID: ".$_REQUEST["transactionID"].", ";
 $text .="Location: ".$_REQUEST["location"].", ";
 $text .="Provider ID: ".$_REQUEST["provider"].", ";
+$text .="Date: ".$_REQUEST["date"].", ";
 
 
 QRcode::png($text,$file,'L',10,2);

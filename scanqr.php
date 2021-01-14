@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if( $_SESSION["Type"]!="Provider")
+if( $_SESSION["Type"]!="Customer")
 {
     echo "you are not allow to access this page";
     exit();

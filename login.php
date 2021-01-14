@@ -28,11 +28,11 @@ if(isset($_POST['login']))
 
             if($row['Type']=="Customer")
             {
-                header("Location: index.php"); 
+                header("Location: scanqr.php"); 
             }
             else
             {
-                header("Location: scanqr.php"); 
+                header("Location: index.php"); 
             }
         }
         else
